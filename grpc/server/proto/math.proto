@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "./proto";
+
+service Math {
+    rpc Sum(NumberRequest) returns (NumberReponse);
+}
+
+message NumberRequest {
+    int64 num1 = 1;
+    int64 num2 = 2;
+}
+message NumberReponse {
+    int64 num = 1;
+}
